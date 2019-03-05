@@ -1,8 +1,8 @@
 import ipaddress
 import logging
 
-from rfc5399stunserver.constants import AttrType
-from rfc5399stunserver.stun_attribute import STUNAttribute
+from rfc5389stunserver.constants import AttrType
+from rfc5389stunserver.stun_attribute import STUNAttribute
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -14,7 +14,7 @@ with RFC 3489 [RFC3489] clients.
 
 
 class MappedAddress(STUNAttribute):
-    def __init__(self, port, ipaddr):
+    def __init__(self, port: int, ipaddr: str):
         self.type = AttrType.MAPPED_ADDRESS
         self.port = port
         self.ipaddr = ipaddress.ip_address(ipaddr)
@@ -32,7 +32,7 @@ class MappedAddress(STUNAttribute):
         if (self.isIPv6):
             return 1 + 1 + 2 + 16
         else:
-            return 1 + + 2 + 4
+            return 1 + 1 + 2 + 4
 
     @property
     def addr_faimily(self):

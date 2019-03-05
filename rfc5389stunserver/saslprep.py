@@ -4,13 +4,13 @@ import unicodedata
 
 class SASLprep:
     @staticmethod
-    def saslprep(text):
+    def saslprep(text: str):
         if SASLprep.__check_bidirectional_string(text):
             raise Exception('Bidirectional strings')
         return ''.join(list(map(SASLprep.__apply_saslgrep_profile, text)))
 
     @staticmethod
-    def __apply_saslgrep_profile(char):
+    def __apply_saslgrep_profile(char: str):
         # Unicode normalization form KC
         char = stringprep.map_table_b2(char)
         if SASLprep.__is_non_ascii_space_character(char):
@@ -24,7 +24,7 @@ class SASLprep:
         return char
 
     @staticmethod
-    def __is_prohibited_in_saslgrep(char):
+    def __is_prohibited_in_saslgrep(char: str):
         if stringprep.in_table_c12(char):
             # Non-ASCII space characters
             return True
@@ -61,19 +61,19 @@ class SASLprep:
         return False
 
     @staticmethod
-    def __is_non_ascii_space_character(char):
+    def __is_non_ascii_space_character(char: str):
         return stringprep.in_table_c12(char)
 
     @staticmethod
-    def __is_commonly_mapped_to_nothing_character(char):
+    def __is_commonly_mapped_to_nothing_character(char: str):
         return stringprep.in_table_b1(char)
 
     @staticmethod
-    def __is_unassigned_code_point(char):
+    def __is_unassigned_code_point(char: str):
         return stringprep.in_table_a1(char)
 
     @staticmethod
-    def __check_bidirectional_string(text):
+    def __check_bidirectional_string(text: str):
         isContainLTR = any(
             [unicodedata.bidirectional(char) == 'L' for char in text])
         isContainRTL = any(

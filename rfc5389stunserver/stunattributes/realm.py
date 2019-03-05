@@ -1,8 +1,8 @@
 import logging
 
-from rfc5399stunserver.constants import AttrType
-from rfc5399stunserver.saslprep import SASLprep
-from rfc5399stunserver.stun_attribute import STUNAttribute
+from rfc5389stunserver.constants import AttrType
+from rfc5389stunserver.saslprep import SASLprep
+from rfc5389stunserver.stun_attribute import STUNAttribute
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

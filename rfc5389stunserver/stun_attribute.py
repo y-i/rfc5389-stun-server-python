@@ -1,6 +1,6 @@
 import logging
 
-from rfc5399stunserver.constants import AttrType
+from rfc5389stunserver.constants import AttrType
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

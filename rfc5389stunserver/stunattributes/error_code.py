@@ -1,5 +1,5 @@
-from rfc5399stunserver.constants import AttrType, ErrorCodeType
-from rfc5399stunserver.stun_attribute import STUNAttribute
+from rfc5389stunserver.constants import AttrType, ErrorCodeType
+from rfc5389stunserver.stun_attribute import STUNAttribute
 
 
 class ErrorCode(STUNAttribute):

@@ -1,7 +1,7 @@
 from functools import reduce
 
-from rfc5399stunserver.constants import AttrType
-from rfc5399stunserver.stun_attribute import STUNAttribute
+from rfc5389stunserver.constants import AttrType
+from rfc5389stunserver.stun_attribute import STUNAttribute
 
 '''
 errorcode = 420の場合のみ

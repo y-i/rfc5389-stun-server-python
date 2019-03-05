@@ -4,12 +4,12 @@ import hashlib
 import hmac
 import socket
 
-from rfc5399stunserver.saslprep import SASLprep
-from rfc5399stunserver.stunattributes.mapped_address import MappedAddress
-from rfc5399stunserver.stunattributes.xor_mapped_address import XorMappedAddress
-from rfc5399stunserver.stunattributes.unknown_attributes import UnknownAttributes
-from rfc5399stunserver.stun_attribute import STUNAttribute
-from rfc5399stunserver.stun_header import STUNHeader, MsgClass
+from rfc5389stunserver.saslprep import SASLprep
+from rfc5389stunserver.stunattributes.mapped_address import MappedAddress
+from rfc5389stunserver.stunattributes.xor_mapped_address import XorMappedAddress
+from rfc5389stunserver.stunattributes.unknown_attributes import UnknownAttributes
+from rfc5389stunserver.stun_attribute import STUNAttribute
+from rfc5389stunserver.stun_header import STUNHeader, MsgClass
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

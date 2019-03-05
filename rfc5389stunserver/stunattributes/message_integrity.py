@@ -1,9 +1,9 @@
 import hashlib
 import hmac
 
-from rfc5399stunserver.constants import AttrType
-from rfc5399stunserver.saslprep import SASLprep
-from rfc5399stunserver.stun_attribute import STUNAttribute
+from rfc5389stunserver.constants import AttrType
+from rfc5389stunserver.saslprep import SASLprep
+from rfc5389stunserver.stun_attribute import STUNAttribute
 
 '''
 The MESSAGE-INTEGRITY attribute contains an HMAC-SHA1 [RFC2104]
