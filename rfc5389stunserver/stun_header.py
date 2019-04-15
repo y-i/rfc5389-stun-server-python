@@ -27,6 +27,10 @@ class STUNHeader:
                 (class_high << 7) + (class_low << 4)).to_bytes(2, 'big')
 
     @property
+    def isRfc3489(self):
+        return self.magic_cookie != bytes.fromhex('2112A442')
+
+    @property
     def bin(self):
         return (self.create_msg_type() +
                 self.message_length.to_bytes(2, 'big') +
