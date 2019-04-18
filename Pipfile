@@ -13,5 +13,9 @@ pylint = "*"
 
 [packages]
 
+[scripts]
+start = "python server.py"
+test = "python -m unittest discover tests"
+
 [requires]
 python_version = "3.7"
